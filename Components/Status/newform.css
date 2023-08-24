@@ -1,0 +1,96 @@
+/* ... Existing styles ... */
+
+/* Styles for the new application button */
+.new-application-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .new-application-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styles for the new application form */
+  .new-application-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .new-application-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .new-application-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  .new-application-form input[type="date"] {
+    text-align: center;
+  }
+  .new-application-form input[type="text"]{
+    text-align: center;
+    max-width:80%;
+  }
+  
+  .new-application-form input[type="tel"],
+  .new-application-form input[type="date"],
+  .new-application-form input[type="email"],
+  .new-application-form input[type="number"] {
+    width: 80%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .new-application-form select {
+    width: 80%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .new-application-form textarea {
+    width: 60%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .new-application-form input[type="date"] {
+    text-align: center;
+  }
+  
+  .new-application-form .submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    height: 40px;
+  }
+  
+  .new-application-form .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* ... Additional styles ... */
+  

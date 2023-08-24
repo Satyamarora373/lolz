@@ -1,0 +1,223 @@
+.Status-App {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-width: 500px;
+  }
+  
+  /* Header */
+  h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Filters section */
+  .filters {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Adjusted to start from the left */
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 10px; /* Added spacing between label and dropdown */
+  }
+  
+  select,
+  input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+  }
+  
+  /* Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  tr:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Search input */
+  input[type="text"] {
+    width: 100%;
+    /* max-width: 250px; */
+  }
+  .action-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+  }
+  
+  .action-button:hover {
+    background-color: #45a049;
+  }
+  /* ... Existing styles ... */
+
+/* Styles for the new application button */
+.new-application-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .new-application-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styles for the new application form */
+  .new-application-form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .new-application-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .new-application-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .new-application-form input[type="text"],
+  .new-application-form input[type="date"],
+  .new-application-form input[type="email"],
+  .new-application-form input[type="number"] {
+    width: 50%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .new-application-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .new-application-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .new-application-form .submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .new-application-form .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* ... Additional styles ... */
+  /* Application Details Form */
+.application-details {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+}
+
+.application-details form {
+  display: grid;
+  gap: 10px;
+}
+
+.application-details label {
+  font-weight: bold;
+}
+
+.application-details input[type="text"],
+.application-details input[type="date"],
+.application-details input[type="tel"],
+.application-details input[type="email"],
+.application-details input[type="file"] {
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.application-details .action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.application-details .action-button {
+  background-color: #0070bb;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.application-details .action-button:hover {
+  background-color: #00538c;
+}
+
+  
+  /* Apply a media query for responsiveness */
+  @media screen and (max-width: 768px) {
+    .App {
+      padding: 10px;
+    }
+  }
+  

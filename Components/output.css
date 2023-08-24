@@ -1,0 +1,88 @@
+/* Reset some default styles */
+
+  
+  /* Header styles */
+  .header {
+    background-color: white;
+    color: #FFF;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  /* Credit Score styles */
+  .score-container {
+    width: 200px;
+    height: 100px; /* Height of the semi-circle */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .score-semi-circle {
+    position: absolute;
+    width: 100%;
+    height: 200%; /* Double the height for the semi-circle */
+    border-radius: 100% 100% 0 0;
+    border: 10px solid;
+    border-bottom: none;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .score-label {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  /* Credit Card Offer styles */
+  .credit-card-offer {
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .credit-card-type {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  /* Benefit List styles */
+  .benefits-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-left: 30px;
+  }
+  
+  .benefits-list li {
+    margin-bottom: 15px;
+  }
+  
+  /* PDF Button styles */
+  .pdf-button {
+    display: block;
+    margin-top: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: auto;
+    background-color: #007BFF;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+  }
+  
+  .pdf-button:hover {
+    background-color: #0056b3;
+  }
+  
