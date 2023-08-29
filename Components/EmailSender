@@ -1,0 +1,23 @@
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.HttpClients;
+
+public class EmailSender {
+    public static void main(String[] args) throws Exception {
+        HttpClient httpClient = HttpClients.createDefault();
+        HttpPost httpPost = new HttpPost("http://localhost:5000/send-email");
+
+        String jsonPayload = "{\"to_email\": \"recipient@example.com\", \"subject\": \"Hello\", \"message\": \"This is a test email\"}";
+        StringEntity entity = new StringEntity(jsonPayload);
+        httpPost.setEntity(entity);
+        httpPost.setHeader("Accept", "application/json");
+        httpPost.setHeader("Content-type", "application/json");
+
+        HttpResponse response = httpClient.execute(httpPost);
+
+        // Handle the response here
+        System.out.println("Response Code: " + response.getStatusLine().getStatusCode());
+    }
+}
