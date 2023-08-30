@@ -1,0 +1,57 @@
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import os
+import webbrowser
+
+# Email configuration
+smtp_server = 'smtp.office365.com'
+smtp_port = 587  # Use 465 for SSL
+sender_email = 'your_email@example.com'
+receiver_email = 'receiver@example.com'
+subject = 'Test Email'
+message = 'This is a test email sent from Python.'
+
+# Create the email content
+msg = MIMEMultipart()
+msg['From'] = sender_email
+msg['To'] = receiver_email
+msg['Subject'] = subject
+msg.attach(MIMEText(message, 'plain'))
+
+# OAuth2 configuration
+client_id = 'your_client_id'
+redirect_uri = 'http://localhost'
+authorization_base_url = 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize'
+token_url = 'https://login.microsoftonline.com/common/oauth2/v2.0/token'
+scopes = ['https://outlook.office365.com/SMTP.Send']
+
+# OAuth2 flow
+from requests_oauthlib import OAuth2Session
+
+oauth = OAuth2Session(client_id, redirect_uri=redirect_uri, scope=scopes)
+authorization_url, state = oauth.authorization_url(authorization_base_url, access_type="offline")
+
+# Open the authorization URL in a web browser to obtain the token
+webbrowser.open(authorization_url)
+authorization_response = input("Enter the full callback URL: ")
+
+# Fetch the token using the authorization response
+token = oauth.fetch_token(token_url, authorization_response=authorization_response, client_secret='your_client_secret')
+
+try:
+    # Create the SMTP connection
+    smtp_server = smtplib.SMTP(smtp_server, smtp_port)
+    smtp_server.starttls()
+    
+    # Authenticate using the OAuth2 token
+    smtp_server.ehlo()
+    smtp_server.login(sender_email, token['access_token'])
+
+    # Send the email
+    smtp_server.sendmail(sender_email, receiver_email, msg.as_string())
+    print("Email sent successfully!")
+except Exception as e:
+    print("An error occurred:", str(e))
+finally:
+    smtp_server.quit()
